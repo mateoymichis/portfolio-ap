@@ -1,0 +1,20 @@
+.skills-container {
+    width: 80%;
+    background-color: #ddd;
+    margin-bottom: 1rem;
+}
+
+.skills {
+    text-align: right; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    color: white; 
+}
+
+/* Revisar variable --color-skills*/
+
+.html {width: 90%; background-color: var(--color-skills);} 
+.css {width: 80%; background-color: var(--color-skills);} 
+.javascript {width: 65%; background-color: var(--color-skills);} 
+.angular {width: 60%; background-color: var(--color-skills);}
+.java {width: 60%; background-color: var(--color-skills);}
