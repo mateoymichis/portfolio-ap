@@ -10,8 +10,9 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FotoComponent } from './components/foto/foto.component';
 import { SocialComponent } from './components/social/social.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PersonaComponent } from './components/persona/persona.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +24,13 @@ import { SocialComponent } from './components/social/social.component';
     SkillsComponent,
     ProyectosComponent,
     FooterComponent,
-    FotoComponent,
-    SocialComponent
+    SocialComponent,
+    PersonaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
