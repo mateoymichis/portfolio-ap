@@ -13,6 +13,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SocialComponent } from './components/social/social.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PersonaComponent } from './components/persona/persona.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './service/interceptor-service';
 
 @NgModule({
   declarations: [
@@ -25,14 +29,19 @@ import { PersonaComponent } from './components/persona/persona.component';
     ProyectosComponent,
     FooterComponent,
     SocialComponent,
-    PersonaComponent
+    PersonaComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
