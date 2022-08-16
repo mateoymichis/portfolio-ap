@@ -8,7 +8,7 @@
     text-align: right; 
     padding-top: 10px; 
     padding-bottom: 10px; 
-    color: white; 
+    background-color:var(--color-skills); 
 }
 
 /* Revisar variable --color-skills*/

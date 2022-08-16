@@ -1,8 +1,24 @@
-<h2 class="seccion-titulo">Experiencia</h2>
-            <ul>
-                <li>
-                    <p class="institucion">Dirección General de Cultura y Educación, Necochea: docente</p>
-                    <p class="fecha">ABRIL DEL 2015 - PRESENTE</p>
-                    <p>Profesor de matemática en escuelas secundarias públicas de gestión estatal.</p>
-                </li>
-            </ul>
+<div class="row">
+    <h2 class="seccion-titulo">Experiencia</h2>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-secondary" routerLink="/nuevaexp" *ngIf="isLogged">
+            Nueva experiencia
+        </button>
+    </div>
+
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Experiencia of experiencia">
+                    <td>{{Experiencia.nombreE}}</td>
+                    <td>{{Experiencia.descripcionE}}</td>
+                    <td>{{Experiencia.fechaIE}} - {{Experiencia.fechaFE}}</td>
+                    <td *ngIf="isLogged"><a href="/editarexp/{{Experiencia.id}}"><img src="../../../assets/img/pencil.svg" title="Editar"></a></td>
+                    <td *ngIf="isLogged"><img src="../../../assets/img/trash.svg" title="Eliminar" (click)="delete(Experiencia.id)"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>

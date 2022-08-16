@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    --color-header: #ebf7f8;
+    --color-bordes-section: #d0e0eb;
+    --color-titulos: #010d23;
+    --color-texto: #03223f;
+    --color-skills: #177f0e;
+    --color-fondo: #ffffff;
+    --texto: 'Lato', sans-serif;
+    --titulos: 'Rubik', sans-serif;
+    box-sizing: border-box;
+}

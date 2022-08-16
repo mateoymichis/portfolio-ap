@@ -1,20 +1,24 @@
-<h2 class="seccion-titulo">Educación</h2>
-            <ul>
-                <li>
-                    <p class="institucion">Escuela Normal Superior “José Manuel Estrada” ISFD N°163, Necochea</p>
-                    <p class="titulo">Profesorado de tercer ciclo de la EGB y de la Educación Polimodal en Matemática</p>
-                    <p class="fecha">MARZO DEL 2008 - AGOSTO DEL 2016</p>
-                    
-                </li>
-                <li>
-                    <p class="institucion">E.E.T. Nº 2 “General Mariano Necochea”, Necochea</p>
-                    <p class="titulo">Título de bachiller. Modalidad producción de bienes y servicios.</p>
-                    <p class="fecha">MARZO DEL 2003 - DICIEMBRE DEL 2005</p>
-                </li>       
-                <li>
-                    <p class="institucion">E.E.T. Nº 2 “General Mariano Necochea”, Necochea</p>
-                    <p class="titulo">Técnico en equipos e instalaciones electromecánicas.
-                    </p>
-                    <p class="fecha">MARZO DEL 2003 - DICIEMBRE DEL 2005</p>
-                </li>               
-            </ul>
+<div class="row">
+    <h2 class="seccion-titulo">Educacion</h2>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-secondary" routerLink="/nuevaedu" *ngIf="isLogged">
+            Agregar educación
+        </button>
+    </div>
+
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <td>{{Educacion.nombreEd}}</td>
+                    <td>{{Educacion.descripcionEd}}</td>
+                    <td>{{Educacion.fechaIEd}} - {{Educacion.fechaFEd}}</td>
+                    <td *ngIf="isLogged"><a href="/editaredu/{{Educacion.id}}"><img src="../../../assets/img/pencil.svg" title="Editar"></a></td>
+                    <td *ngIf="isLogged"><img src="../../../assets/img/trash.svg" title="Eliminar" (click)="delete(Educacion.id)"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>

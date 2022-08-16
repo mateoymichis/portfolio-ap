@@ -1,0 +1,6 @@
+.bloque {
+    margin: 1rem 2rem;
+    padding: 1rem 1rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+}

@@ -1,27 +1,15 @@
 <h2 class="seccion-titulo">Hard skills & soft skills</h2>
+<button type="button" class="btn btn-secondary" routerLink="/nuevaskill" *ngIf="isLogged">
+    Agregar skill
+</button>
             
-            <h3 class="skills-titulo">HTML</h3>
-            <div class="skills-container">
-                <div class="skills html"></div>
-            </div>
-
-            <h3 class="skills-titulo">CSS</h3>
-            <div class="skills-container">
-                <div class="skills css"></div>
-            </div>
-
-            <h3 class="skills-titulo">JavaScript</h3>
-            <div class="skills-container">
-                <div class="skills javascript"></div>
-            </div>
-
-            <h3 class="skills-titulo">Angular</h3>
-            <div class="skills-container">
-                <div class="skills angular"></div>
-            </div>
-
-            <h3 class="skills-titulo">Java</h3>
-                <div class="skills-container">
-            <div class="skills java"></div>
+<div *ngFor="let Skill of skill">
+    <h3 class="skills-titulo">{{Skill.nombre}}</h3>
+    <img src={{Skill.img}} alt="">
+    <div class="skills-container">
+        <div class="skills" [style.width.%]="Skill.porcentaje"></div>
+    </div>
+    <div *ngIf="isLogged"><a href="/editarskill/{{Skill.id}}"><img src="../../../assets/img/pencil.svg" title="Editar"></a></div>
+    <div *ngIf="isLogged"><img src="../../../assets/img/trash.svg" title="Eliminar" (click)="delete(Skill.id)"></div>
+</div>
             
-            </div>
