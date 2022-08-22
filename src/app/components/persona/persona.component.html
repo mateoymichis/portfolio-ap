@@ -5,6 +5,7 @@
     </div>
     
     <div class="cabecera-foto">
-            <img src={{persona.img}} alt="Mateo Fernandez">
+            <img class="perfil" src={{persona.img}} alt="Mateo Fernandez">
     </div>
+    <div *ngIf="isLogged"><a href="/editarpersona/{{persona.id}}"><img src="../../../assets/img/pencil.svg" title="Editar"></a></div>
 </div>
