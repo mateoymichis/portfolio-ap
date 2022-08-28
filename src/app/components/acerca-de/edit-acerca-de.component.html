@@ -1,0 +1,17 @@
+<div class="container" *ngIf="acercade">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="acercade.descripcion" required>
+                </div>
+                
+                                <button type="submit" class="btn btn-primary">Actualizar acerca de</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

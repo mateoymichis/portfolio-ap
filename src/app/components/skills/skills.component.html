@@ -2,14 +2,21 @@
 <button type="button" class="btn btn-secondary" routerLink="/nuevaskill" *ngIf="isLogged">
     Agregar skill
 </button>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 skill" *ngFor="let Skill of skill">
+            <h3 class="skills-titulo">{{Skill.nombre}}</h3>
+            <div class="skill-contenedor">
+                <img class="skills-img" src={{Skill.img}} alt="">
+            <div class="skills-barra">
+                <div class="skills-porcentaje" [style.width.%]="Skill.porcentaje"></div>
+            </div>
+            <div *ngIf="isLogged"><a href="/editarskill/{{Skill.id}}"><img src="../../../assets/img/pencil.svg" title="Editar"></a></div>
+            <div *ngIf="isLogged"><img src="../../../assets/img/trash.svg" title="Eliminar" (click)="delete(Skill.id)"></div>
+            </div>
             
-<div *ngFor="let Skill of skill">
-    <h3 class="skills-titulo">{{Skill.nombre}}</h3>
-    <img src={{Skill.img}} alt="">
-    <div class="skills-container">
-        <div class="skills" [style.width.%]="Skill.porcentaje"></div>
+        </div>
     </div>
-    <div *ngIf="isLogged"><a href="/editarskill/{{Skill.id}}"><img src="../../../assets/img/pencil.svg" title="Editar"></a></div>
-    <div *ngIf="isLogged"><img src="../../../assets/img/trash.svg" title="Eliminar" (click)="delete(Skill.id)"></div>
-</div>
+</div>         
+
             

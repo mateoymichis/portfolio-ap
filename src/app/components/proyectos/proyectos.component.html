@@ -2,15 +2,25 @@
 <button type="button" class="btn btn-secondary" routerLink="/nuevoproyecto" *ngIf="isLogged">
   Agregar proyecto
 </button>
-<div *ngFor="let Proyecto of proyecto">
-<div class="card" style="width: 18rem;">
-    <img src={{Proyecto.img}}}} class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{Proyecto.nombre}}</h5>
-      <p class="card-text">{{Proyecto.descripcion}}</p>
-      <a href="#" class="btn btn-primary">Link</a>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4 proyectos" *ngFor="let Proyecto of proyecto">
+
+      <div class="card" style="width: 26rem;">
+        <img src={{Proyecto.img}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{Proyecto.nombre}}</h5>
+          <p class="card-text">{{Proyecto.descripcion}}</p>
+          <a href={{Proyecto.link1}} class="btn btn-primary" target="_blank">GitHub</a>
+          <a href={{Proyecto.link2}} class="btn btn-primary" target="_blank">Sitio web</a>
+        </div>
+      </div>
+      <div *ngIf="isLogged"><a href="/editarproyecto/{{Proyecto.id}}"><img src="../../../assets/img/pencil.svg"
+            title="Editar"></a></div>
+      <div *ngIf="isLogged"><img src="../../../assets/img/trash.svg" title="Eliminar" (click)="delete(Proyecto.id)">
+      </div>
     </div>
   </div>
-  <div *ngIf="isLogged"><a href="/editarproyecto/{{Proyecto.id}}"><img src="../../../assets/img/pencil.svg" title="Editar"></a></div>
-    <div *ngIf="isLogged"><img src="../../../assets/img/trash.svg" title="Eliminar" (click)="delete(Proyecto.id)"></div>
+
+
 </div>

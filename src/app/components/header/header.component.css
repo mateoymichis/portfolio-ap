@@ -1,7 +1,6 @@
-.banner {
+.header {
     background-image: url(../../../assets/img/fondo.jpg);
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: space-between;
     padding: 1rem 1rem;
+    margin-bottom: 1rem;
 }

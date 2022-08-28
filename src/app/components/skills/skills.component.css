@@ -1,20 +1,28 @@
-.skills-container {
-    width: 80%;
+.skill {
+    margin-bottom: 1rem;
+}
+
+.skill-contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+.skills-barra {
+    width: 75%;
+    height: 30px;
     background-color: #ddd;
     margin-bottom: 1rem;
 }
 
-.skills {
+.skills-porcentaje {
     text-align: right; 
-    padding-top: 10px; 
-    padding-bottom: 10px; 
+    height: 30px;
     background-color:var(--color-skills); 
 }
 
-/* Revisar variable --color-skills*/
+.skills-img {
+    width: 40px;
+}
 
-.html {width: 90%; background-color: var(--color-skills);} 
-.css {width: 80%; background-color: var(--color-skills);} 
-.javascript {width: 65%; background-color: var(--color-skills);} 
-.angular {width: 60%; background-color: var(--color-skills);}
-.java {width: 60%; background-color: var(--color-skills);}
+h3 {
+    font-size: 1.4rem;
+}

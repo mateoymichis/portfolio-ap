@@ -1,5 +1,20 @@
+.persona {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
 h1, p {
-    color: white;
+    color: var(--color-texto-claro);
+}
+
+h1 {
+    font-size: 2.7rem;
+}
+
+p {
+    font-size: 1.7rem;
 }
 
 .perfil {

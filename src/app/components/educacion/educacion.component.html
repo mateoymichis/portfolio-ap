@@ -11,9 +11,9 @@
         <table class="table">
             <tbody>
                 <tr *ngFor="let Educacion of educacion">
-                    <td>{{Educacion.nombreEd}}</td>
-                    <td>{{Educacion.descripcionEd}}</td>
-                    <td>{{Educacion.fechaIEd}} - {{Educacion.fechaFEd}}</td>
+                    <td><h3>{{Educacion.nombreEd}}</h3></td>
+                    <td><p>{{Educacion.descripcionEd}}</p></td>
+                    <td><p>{{Educacion.fechaIEd}} - {{Educacion.fechaFEd}}</p></td>
                     <td *ngIf="isLogged"><a href="/editaredu/{{Educacion.id}}"><img src="../../../assets/img/pencil.svg" title="Editar"></a></td>
                     <td *ngIf="isLogged"><img src="../../../assets/img/trash.svg" title="Eliminar" (click)="delete(Educacion.id)"></td>
                 </tr>

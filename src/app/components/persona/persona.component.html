@@ -1,11 +1,13 @@
-<div class="persona">
-    <div class="titulo">
-        <h1>{{persona.nombre}} {{persona.apellido}}</h1>
-        <p>{{persona.profesion}}</p>
-    </div>
+    <div class="persona">
+        <div class="titulo">
+            <h1>{{persona.nombre}} {{persona.apellido}}</h1>
+            <p>{{persona.profesion}}</p>
+        </div>
+        
+        <div class="cabecera-foto">
+                <img class="perfil" src={{persona.img}} alt="Mateo Fernandez">
+        </div>
+        <div *ngIf="isLogged"><a href="/editarpersona/{{persona.id}}"><img id="icono-editar" src="../../../assets/img/pencil - white.svg" title="Editar"></a></div>
     
-    <div class="cabecera-foto">
-            <img class="perfil" src={{persona.img}} alt="Mateo Fernandez">
     </div>
-    <div *ngIf="isLogged"><a href="/editarpersona/{{persona.id}}"><img src="../../../assets/img/pencil.svg" title="Editar"></a></div>
-</div>
+   

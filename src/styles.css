@@ -1,11 +1,24 @@
 * {
-    --color-header: #ebf7f8;
-    --color-bordes-section: #d0e0eb;
+    --color-texto-claro: #ebf7f8;
+    --color-bordes: #d0e0eb;
     --color-titulos: #010d23;
     --color-texto: #03223f;
     --color-skills: #177f0e;
-    --color-fondo: #ffffff;
+    --color-fondo: #f3ecec;
     --texto: 'Lato', sans-serif;
     --titulos: 'Rubik', sans-serif;
     box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+}
+h1, h2, h3 {
+    font-family: var(--titulos);
+    color: var(--color-titulos)
+}
+
+p {
+    font-family: var(--texto);
+    color: var(--color-texto)
 }

@@ -1,6 +1,10 @@
 .bloque {
-    margin: 1rem 2rem;
+    margin-bottom: 1rem;
     padding: 1rem 1rem;
-    border: 1px solid #000;
+    border: 1px solid var(--color-bordes);
     border-radius: 5px;
+}
+
+h2 {
+    font-size: 2rem;
 }
