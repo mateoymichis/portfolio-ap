@@ -7,7 +7,9 @@ import { AcercaDe } from '../model/acerca-de';
   providedIn: 'root'
 })
 export class AcercaDeService {
-  URL =  'https://backend-mateofernandez.herokuapp.com/acercade';
+  //Desarrollo
+  //URL = 'http://localhost:8080/acercade';
+  URL =  'https://portfolio-backend-mf.up.railway.app/acercade';
   constructor(private httpClient: HttpClient) { }
 
   public getAcercaDe(): Observable<AcercaDe> {
