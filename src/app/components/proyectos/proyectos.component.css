@@ -1,8 +1,10 @@
 .proyectos {
     display: flex;
+    justify-content: center;
     margin-bottom: 1rem;
 }
 
-.btn {
-    margin-right: 2rem;
+.botones {
+    display: flex;
+    justify-content: space-around;
 }

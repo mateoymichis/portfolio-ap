@@ -11,8 +11,11 @@
         <div class="card-body">
           <h5 class="card-title">{{Proyecto.nombre}}</h5>
           <p class="card-text">{{Proyecto.descripcion}}</p>
-          <a href={{Proyecto.link1}} class="btn btn-primary" target="_blank">GitHub</a>
-          <a href={{Proyecto.link2}} class="btn btn-primary" target="_blank">Sitio web</a>
+          <div class="botones">
+            <a href={{Proyecto.link1}} class="btn btn-primary" target="_blank">GitHub</a>
+            <a href={{Proyecto.link2}} class="btn btn-primary" target="_blank">Sitio web</a>
+          </div>
+          
         </div>
       </div>
       <div *ngIf="isLogged"><a href="/editarproyecto/{{Proyecto.id}}"><img src="../../../assets/img/pencil.svg"
